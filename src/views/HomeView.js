@@ -34,13 +34,27 @@ export default function HomeView() {
             {trendings && (
                 <ul className="movies">
                     {trendings.map(trending => (
-                        <ViewItem key={trending.id} images={trending.poster_path} id={trending.id} title={trending.title} rating={trending.vote_avarage}
+                        <ViewItem
+                            key={trending.id}
+                            images={trending.poster_path}
+                            id={trending.id}
+                            title={trending.title}
+                            rating={trending.vote_avarage}
                         />
                     ))}
                 </ul>
             )}
             {totalPage > 1 && (
-                <Pagination className={classes.root} count={totalPage} size="large" page={Number(page)} shape="rounded" showFirstButton showLastButton onChange={handleChange} />
+                <Pagination
+                    className={classes.root}
+                    count={totalPage}
+                    size="large"
+                    page={Number(page)}
+                    shape="rounded"
+                    showFirstButton
+                    showLastButton
+                    onChange={handleChange}
+                />
             )}
         </>
     );
