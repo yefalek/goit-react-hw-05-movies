@@ -1,15 +1,15 @@
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
-import { ToastContainer } from 'react-toastify'
+import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import Container from '';
-import AppBar from '';
-import Loader from '';
-import Footer from '';
+import Container from './components/Container';
+import HeaderNav from './components/HeaderNav';
+import Loader from './components/Loader';
+import Footer from './components/Footer';
 
 const HomeView = lazy(() => import('./views/HomeView' /* webpackChunkName: "HomeView" */),);
-const MoviesView = lazy(() => import('./' /*  webpackChunkName: "MoviesView" */),);
+const MoviesView = lazy(() => import('.' /*  webpackChunkName: "MoviesView" */),);
 const MovieDetailsPage = lazy(() => import('' /* webpackChunkName: "MovieDetailsPage" */),);
 const NotFoundView = lazy(() => import('./views/NotFoundView' /* webpackChunkName: "NotFoundView" */),);
 
@@ -17,7 +17,7 @@ export default function App() {
   return (
     <>
       <Container>
-        <AppBar/>
+        <HeaderNav/>
           <Suspense fallback={<Loader/>}>
             <Switch>
               <Route path='/' exact><HomeView /></Route>

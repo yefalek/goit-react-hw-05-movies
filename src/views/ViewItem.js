@@ -1,7 +1,7 @@
 import { useLocation, NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
 import slugify from 'slugify';
-import noImages from '';
+import noImages from '../images/images.png';
 
 export default function ViewItem({ id, title, images, rating }) {
     const location = useLocation();
