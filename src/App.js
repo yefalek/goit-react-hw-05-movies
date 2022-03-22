@@ -1,4 +1,4 @@
-import { Switch, Route, } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -9,8 +9,8 @@ import Loader from './components/Loader';
 import Footer from './components/Footer';
 
 const HomeView = lazy(() => import('./views/HomeView' /* webpackChunkName: "HomeView" */),);
-const MoviesView = lazy(() => import('.' /*  webpackChunkName: "MoviesView" */),);
-const MovieDetailsPage = lazy(() => import('' /* webpackChunkName: "MovieDetailsPage" */),);
+const MoviesView = lazy(() => import('./components/MoviesView/MoviesView' /*  webpackChunkName: "MoviesView" */),);
+const MovieDetailsPage = lazy(() => import('./components/MoviesView/MovieDetailsPage/MovieDetailsPage' /* webpackChunkName: "MovieDetailsPage" */),);
 const NotFoundView = lazy(() => import('./views/NotFoundView' /* webpackChunkName: "NotFoundView" */),);
 
 export default function App() {
