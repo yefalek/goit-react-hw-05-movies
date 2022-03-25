@@ -8,12 +8,12 @@ import HeaderNav from './components/HeaderNav';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
 
-const HomeView = lazy(() => import('./views/HomeView' /* webpackChunkName: "HomeView" */),);
+const HomeView = lazy(() => import('./views/HomeView.js' /* webpackChunkName: "HomeView" */),);
 const MoviesView = lazy(() => import('./components/MoviesView/MoviesView' /*  webpackChunkName: "MoviesView" */),);
 const MovieDetailsPage = lazy(() => import('./components/MoviesView/MovieDetailsPage/MovieDetailsPage' /* webpackChunkName: "MovieDetailsPage" */),);
 const NotFoundView = lazy(() => import('./views/NotFoundView' /* webpackChunkName: "NotFoundView" */),);
 
-export default function App() {
+export  function App() {
   return (
     <>
       <Container>

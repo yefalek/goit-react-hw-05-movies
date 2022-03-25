@@ -11,7 +11,7 @@ export default function Reviews({ movieId }) {
 
   useEffect(() => {
     setStatus(Status.PENDING);
-    setTimeout(() => {movieAPI.fetcthReviewsMovie(movieId).then(({ results }) => {
+    setTimeout(() => {movieAPI.fetchReviewsMovie(movieId).then(({ results }) => {
           setReviews(results);
           setStatus(Status.RESOLVED);
         }).catch(error => {

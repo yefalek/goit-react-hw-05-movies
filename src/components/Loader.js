@@ -1,12 +1,16 @@
-import LoadingOverlay from 'react-loading-overlay';
+import React from 'react';
+import {Rings} from 'react-loader-spinner';
+import styles from './Loader.module.scss';
 
-export default function Loader() {
-    return (
-        <LoadingOverlay
-        spinner
-        text='Loading your content...'
-        >
-        {/* <p>Some content or children or something.</p> */}
-        </LoadingOverlay>
-    );
-}
+const Loader = () => (
+  <div className={styles.Loader}>
+    <Rings
+      type="Rings"
+      color="black" 
+      height={100}
+      width={100}
+    />
+  </div>
+);
+
+export default Loader;

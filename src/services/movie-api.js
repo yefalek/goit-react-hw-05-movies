@@ -15,13 +15,17 @@ export function featchSearchMovie(query, page) {
     return fetchWithErrorHandling(`${BASE_URL}/search/movie?api_key=${API_KEY}&language=ru-RU&page=${page}&query=${query}&include_adult=true`,);
 }
 
+export function fetchDetailsMovie(movieId) {
+    return fetchWithErrorHandling(`${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&language=en-US`,);
+}
+
 //personal film information
 export function fetchDetailsMovieVideo(movieId) {
     return fetchWithErrorHandling(`${BASE_URL}/movie/${movieId}/videos?api_key=${API_KEY}&language=ru-RU`,);
 }
 
 //this film's actors
-export function fetchActorsMovie(movieId) {
+export function fetcthActorsMovie(movieId) {
     return fetchWithErrorHandling(`${BASE_URL}/movie/${movieId}/credits?api_key=${API_KEY}&language=ru-RU`,);
 }
 

@@ -1,9 +1,9 @@
 import { useLocation, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Pagination from "";
-import PageHeading from "";
-import * as movieApi from "";
-import useStyles from "";
+import Pagination from "@material-ui/lab/Pagination";
+import PageHeading from "../components/PageHeading";
+import * as movieApi from "../services/movie-api";
+import useStyles from "../services/stylePagination";
 import ViewItem from "./ViewItem"
 import './HomeView.scss';
 
