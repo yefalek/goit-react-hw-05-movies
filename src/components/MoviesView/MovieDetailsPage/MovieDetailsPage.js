@@ -12,7 +12,7 @@ const Cast = lazy(() => import('../Cast/Cast.js' /* webpackChunkName: "Cast" */)
 const Reviews = lazy(() => import('../Review/Reviews' /* webpackChunkName: "Review" */));
 
 export default function MovieDetailsPage() {
-    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+  const IMG_URL = 'https://image.tmdb.org/t/p/w500';
   const history = useHistory();
   const location = useLocation();
   const [error, setError] = useState(null);

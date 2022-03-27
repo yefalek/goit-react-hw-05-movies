@@ -7,8 +7,7 @@ export default function ViewItem({ id, title, images, rating }) {
     const location = useLocation();
     const IMG_URL = 'https://image.tmdb.org/t/p/w500/';
 
-    const makeSlug = string =>
-        slugify(string, { lower: true, });
+    const makeSlug = string => slugify(string, { lower: true, });
     
     return (
         <li key={id} className="movies_item">
@@ -16,9 +15,8 @@ export default function ViewItem({ id, title, images, rating }) {
                 pathname: `/movies/${makeSlug(`${title}${id}`)}`,
                 state: { from: location },
             }}>
-                <div className="movies__images_container"></div>
-                <img className="movies_images"
-                    src={images ? `${IMG_URL}${images}` : noImages}
+                <div ></div>
+                <img src={images ? `${IMG_URL}${images}` : noImages}
                     alt={title}
                     width="300"
                 />

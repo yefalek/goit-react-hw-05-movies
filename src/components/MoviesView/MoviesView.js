@@ -36,7 +36,7 @@ export default function MoviesView() {
             return;
         }
         setStatus(Status.PENDING);
-        movieAPI.featchSearchMovie(query, page).then(({ results, total_pages }) => {
+        movieAPI.fetchSearchMovie(query, page).then(({ results, total_pages }) => {
             if (results.length === 0) {
                 toast.error('Not found');
             }
